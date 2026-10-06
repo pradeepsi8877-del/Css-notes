@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex properties</title>
+
+
+    <style>
+            /*flex defination:- flex work on one dimension either 
+    row wise or column wise  */
+        .container{
+            height: 400px;
+            width: 100%;
+            border: 2px solid black;
+
+            /* it takes on a container */
+            display: flex;
+            /* flex-direction: column;
+            flex-direction: column-reverse; */
+            flex-direction: row;
+            flex-wrap: wrap;
+            flex-wrap: nowrap;
+
+            /* it work on main axis (horizontal) */
+            justify-content: center;
+            justify-content: flex-start;
+            justify-content: flex-end;
+            justify-content: space-between;
+            justify-content: space-around;
+            justify-content: space-evenly;
+
+                /* it work on cross axis (vertically)*/
+                
+            align-items: center;
+            align-content: center;
+            align-items: end;
+            align-items: flex-start;
+
+             gap: 10px;
+        }
+
+        .item{
+            border: 2px solid black;
+            color: red;
+            text-align: center;
+            width: 200px;
+           
+        }
+
+
+        /* order start with 0 it changes the box positions  */
+    #item1{
+        order: 0;
+    }
+
+    /* flex-grow start with 1 , it takes available space of the content  */
+      #item2{
+       flex-grow: 1;
+    }
+
+      /* flex-grow start with 1 , it remove space of the content  */
+      #item3{
+        flex-shrink: 2;
+    }
+
+    /* flex-basis start with 1 it works on width  */
+    #item4{
+        flex-basis: 1;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" id="item1">item1</div>
+        <div class="item" id="item2">item2</div>
+        <div class="item" id="item3">item3</div>
+        <div class="item" id="item4">item4</div>
+        <div class="item" id="item5">item4</div>
+        <div class="item" id="item6">item5</div>
+    </div>
+    
+
+</body>
+</html>

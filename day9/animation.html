@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Properties</title>
+    <style>
+        .container{
+            background-color: red;
+            border: 2px solid blue;
+            height: 500px;
+            width: 100%;
+        }
+
+        .box{
+            height: 200px;
+            width: 200px;
+            border: dotted;
+            background-color: orange;
+            position: relative;
+            animation-name: Pradeep;
+            animation-duration: 3s;
+            animation-delay: 3s;
+            animation-iteration-count: infinite;
+            /* animation-iteration-count: 4; */
+            /* animation-timing-function: ease-out/ease-in/ease-in-out; */
+            animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+            animation-direction: alternate-reverse;
+            
+        }
+
+        /* @keyframes Pradeep {
+            from{
+               width: 100px;
+               height: 300px;
+            }
+            to{
+               width: 1000px;
+            }
+        } */
+
+        @keyframes Pradeep{
+            0%{
+                left: 0px;
+                top: 0px;
+            }
+            25%{
+                left: 0px;
+                top: 250px;
+            }
+            50%{
+                left: 250px;
+                top: 250px;
+            }
+            75%{
+                left: 250px;
+                top: 0px;
+                background-color: green;
+            }
+            100%{
+                left: 0px;
+                top: 0px;
+                background-color: yellow;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>

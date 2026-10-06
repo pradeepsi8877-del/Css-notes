@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Properties</title>
+
+    <style>
+        .container{
+            height: 500px;
+            width: 100%;
+            background-color: red;
+            border: 2px solid black;
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            background-color: green;
+            text-align: center !important;
+            position: relative;
+            animation-name: Boxes;
+            animation-duration: 4s;
+            animation-delay: 2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+
+             text-align: center !important;
+            box-shadow: 10px 10px 5px 5px;
+            text-shadow: 1px 2px 1px 3px;
+            z-index: 100;
+            text-align: center;
+            border-radius: 50%;
+        }
+
+        /* @keyframes Boxes{
+            from{
+                width: 100px;
+            }
+            to{
+                width: 1000px;
+            }
+        } */
+
+
+        @keyframes Boxes{
+            0%{
+                left: 0px;
+                top: 0px;
+            }
+            23%{
+                left: 250px;
+                top: 0px;
+            }
+            56%{
+                left: 250px;
+                top: 250px;
+            }
+            85%{
+                left: 0px;
+                top: 250px;
+                background-color: yellow;
+            }
+            100%{
+                left: 0px;
+                top: 0px;
+                background-color: orange;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="box">Box </div>
+</div>
+
+
+</body>
+</html>
